@@ -66,10 +66,10 @@ module.exports = {
       {
         'dark': '#373E4D',
         'informational': '#00aeff',
-        'success': '#2ad100',
-        'redirection': '#ffb800',
-        'client': '#ff3d00',
-        'server': '#cc00ff',
+        'success': '#70d153',
+        'redirection': '#ffa235',
+        'client': '#fe3634',
+        'server': '#19858c',
       },
       borderRadius:
       {
@@ -78,15 +78,15 @@ module.exports = {
       dropShadow:
       {
         '1XX': '0 16px 16px rgba(0, 174, 255, 0.25)',
-        '2XX': '0 16px 16px rgba(42, 209, 0, 0.25)',
-        '3XX': '0 16px 16px rgba(255, 184, 0, 0.25)',
-        '4XX': '0 16px 16px rgba(255, 61, 0, 0.25)',
-        '5XX': '0 16px 16px rgba(204, 0, 255, 0.25)',
+        '2XX': '0 16px 16px rgba(112, 209, 83, 0.25)',
+        '3XX': '0 16px 16px rgba(255, 162, 53, 0.25)',
+        '4XX': '0 16px 16px rgba(254, 54, 52, 0.25)',
+        '5XX': '0 16px 16px rgba(25, 133, 140, 0.25)'
       },
       gridTemplateColumns:
       {
         'box-content': 'repeat(auto-fit, minmax(22em, 1fr))',
-        'box-content-col-1': 'repeat(1, minmax(22em, 1fr))',
+        'box-content-col-1': 'repeat(1, minmax(22em, 1fr))'
       },
       backgroundImage:
       {
