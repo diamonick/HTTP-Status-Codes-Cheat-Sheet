@@ -79,7 +79,7 @@
 
 .Card
 {
-    perspective: 1000px;
+    perspective: 1080px;
     transform-style: preserve-3d;
 }
 

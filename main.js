@@ -64,25 +64,29 @@ class StatusCodeCard
     }
 }
 
-class DropdownArrow
+class StatusCodeGroup
 {
     selector = "";
     element;
     cards;
+    headerBox;
     boxContent;
+    dropdownArrow;
     isExpanded;
 
-    // Status Code Card constructor
-    constructor(_selector, _cards, _boxContent)
+    // Status Code Group constructor
+    constructor(_selector, _cards, _statusID)
     {
         this.selector = _selector;
         this.element = getElement(_selector);
         this.cards = _cards;
-        this.boxContent = _boxContent;
+        this.headerBox = getElement(`${_selector} .Header-Box`);
+        this.boxContent = getElement(`${_selector} .Box-Content`);
+        this.dropdownArrow = getElement(`${_selector} .Dropdown-Arrow-${_statusID}XX`);
         this.isExpanded = true;
 
         let $self = this;
-        this.element.addEventListener("click", function() {$self.checkState();});
+        this.dropdownArrow.addEventListener("click", function() {$self.checkState();});
     }
 
     checkState()
@@ -107,7 +111,8 @@ class DropdownArrow
             gsap.set(card.element, {display: 'none'});
         });
         
-        gsap.to(this.element, {duration: 0.5, rotationZ: 0, ease: 'power3.out'});
+        gsap.to(this.dropdownArrow, {duration: 0.5, rotationZ: 0, ease: 'power3.out'});
+        gsap.set(this.headerBox, {borderBottomRightRadius: '1.9em', borderBottomLeftRadius: '1.9em'});
         gsap.set(this.boxContent, {padding: '0em'});
     }
 
@@ -121,26 +126,22 @@ class DropdownArrow
             gsap.set(card.element, {display: 'block'});
         });
 
-        gsap.to(this.element, {duration: 0.5, rotationZ: 180, ease: 'power3.out'});
+        gsap.to(this.dropdownArrow, {duration: 0.5, rotationZ: 180, ease: 'power3.out'});
+        gsap.set(this.headerBox, {borderBottomRightRadius: '0em', borderBottomLeftRadius: '0em'});
         gsap.set(this.boxContent, {padding: '4em'});
     }
 }
 
-const informationalBoxContent = getElement(".Informational-Codes .Box-Content");
-const successBoxContent = getElement(".Success-Codes .Box-Content");
-const redirectionBoxContent = getElement(".Redirection-Codes .Box-Content");
-const clientBoxContent = getElement(".Client-Codes .Box-Content");
-const serverBoxContent = getElement(".Server-Codes .Box-Content");
 let statusCodeCards1XX = [];
 let statusCodeCards2XX = [];
 let statusCodeCards3XX = [];
 let statusCodeCards4XX = [];
 let statusCodeCards5XX = [];
-const dropdownArrow1XX = new DropdownArrow(".Dropdown-Arrow-1XX", statusCodeCards1XX, informationalBoxContent);
-const dropdownArrow2XX = new DropdownArrow(".Dropdown-Arrow-2XX", statusCodeCards2XX, successBoxContent);
-const dropdownArrow3XX = new DropdownArrow(".Dropdown-Arrow-3XX", statusCodeCards3XX, redirectionBoxContent);
-const dropdownArrow4XX = new DropdownArrow(".Dropdown-Arrow-4XX", statusCodeCards4XX, clientBoxContent);
-const dropdownArrow5XX = new DropdownArrow(".Dropdown-Arrow-5XX", statusCodeCards5XX, serverBoxContent);
+const informationalGroup = new StatusCodeGroup(".Informational-Codes", statusCodeCards1XX, 1);
+const successGroup = new StatusCodeGroup(".Success-Codes", statusCodeCards2XX, 2);
+const redirectionGroup = new StatusCodeGroup(".Redirection-Codes", statusCodeCards3XX, 3);
+const clientGroup = new StatusCodeGroup(".Client-Codes", statusCodeCards4XX, 4);
+const serverGroup = new StatusCodeGroup(".Server-Codes", statusCodeCards5XX, 5);
 
 //#region Hypertext Transfer Protocol (HTTP) response status codes
 //#region 1XX: Informational Codes
@@ -551,7 +552,7 @@ const statusCodeParams =
     // 1XX: Informational
     {
         codes: informationalCodes,
-        boxContent: informationalBoxContent,
+        boxContent: informationalGroup.boxContent,
         cards: statusCodeCards1XX,
         color: "text-informational",
         bgColor: "bg-informational",
@@ -560,7 +561,7 @@ const statusCodeParams =
     // 2XX: Success
     {
         codes: successCodes,
-        boxContent: successBoxContent,
+        boxContent: successGroup.boxContent,
         cards: statusCodeCards2XX,
         color: "text-success",
         bgColor: "bg-success",
@@ -569,7 +570,7 @@ const statusCodeParams =
     // 3XX: Redirection
     {
         codes: redirectionCodes,
-        boxContent: redirectionBoxContent,
+        boxContent: redirectionGroup.boxContent,
         cards: statusCodeCards3XX,
         color: "text-redirection",
         bgColor: "bg-redirection",
@@ -578,7 +579,7 @@ const statusCodeParams =
     // 4XX: Client
     {
         codes: clientCodes,
-        boxContent: clientBoxContent,
+        boxContent: clientGroup.boxContent,
         cards: statusCodeCards4XX,
         color: "text-client",
         bgColor: "bg-client",
@@ -587,7 +588,7 @@ const statusCodeParams =
     // 5XX: Server
     {
         codes: serverCodes,
-        boxContent: serverBoxContent,
+        boxContent: serverGroup.boxContent,
         cards: statusCodeCards5XX,
         color: "text-server",
         bgColor: "bg-server",

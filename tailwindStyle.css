@@ -695,10 +695,6 @@ video {
   cursor: pointer;
 }
 
-.grid-cols-box-content {
-  grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
-}
-
 .grid-cols-box-content-col-1 {
   grid-template-columns: repeat(1, minmax(22em, 1fr));
 }
@@ -731,20 +727,20 @@ video {
   gap: 0.5em;
 }
 
-.gap-\[0em\] {
-  gap: 0em;
-}
-
 .gap-\[1em\] {
   gap: 1em;
+}
+
+.gap-\[2\.5em\] {
+  gap: 2.5em;
 }
 
 .gap-\[4em\] {
   gap: 4em;
 }
 
-.gap-\[8em\] {
-  gap: 8em;
+.gap-\[3em\] {
+  gap: 3em;
 }
 
 .overflow-y-auto {
@@ -827,20 +823,6 @@ video {
   padding: 4em;
 }
 
-.p-\[1em\] {
-  padding: 1em;
-}
-
-.py-\[3em\] {
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
-.py-\[4em\] {
-  padding-top: 4em;
-  padding-bottom: 4em;
-}
-
 .py-\[6em\] {
   padding-top: 6em;
   padding-bottom: 6em;
@@ -874,6 +856,10 @@ video {
   font-size: 1.5em;
 }
 
+.text-\[16px\] {
+  font-size: 16px;
+}
+
 .text-\[1em\] {
   font-size: 1em;
 }
@@ -882,32 +868,20 @@ video {
   font-size: 3em;
 }
 
-.text-\[4px\] {
-  font-size: 4px;
+.text-\[6px\] {
+  font-size: 6px;
 }
 
 .text-\[8em\] {
   font-size: 8em;
 }
 
-.text-\[16px\] {
-  font-size: 16px;
-}
-
-.text-\[12px\] {
-  font-size: 12px;
-}
-
 .text-\[8px\] {
   font-size: 8px;
 }
 
-.text-\[10px\] {
-  font-size: 10px;
-}
-
-.text-\[6px\] {
-  font-size: 6px;
+.text-\[12px\] {
+  font-size: 12px;
 }
 
 .text-\[\#535D73\] {
@@ -1122,7 +1096,7 @@ video {
 
 .Card
 {
-  perspective: 1000px;
+  perspective: 1080px;
   transform-style: preserve-3d;
 }
 
@@ -1159,58 +1133,36 @@ video {
 }
 
 @media (min-width: 375px) {
-  .mobile-md\:py-\[3em\] {
-    padding-top: 3em;
-    padding-bottom: 3em;
-  }
-
   .mobile-md\:py-\[3\.5em\] {
     padding-top: 3.5em;
     padding-bottom: 3.5em;
-  }
-
-  .mobile-md\:text-\[6px\] {
-    font-size: 6px;
   }
 
   .mobile-md\:text-\[10px\] {
     font-size: 10px;
   }
 
-  .mobile-md\:text-\[8px\] {
-    font-size: 8px;
-  }
-
   .mobile-md\:text-\[11px\] {
     font-size: 11px;
+  }
+
+  .mobile-md\:text-\[6px\] {
+    font-size: 6px;
   }
 }
 
 @media (min-width: 425px) {
-  .mobile-lg\:py-\[4\.5em\] {
-    padding-top: 4.5em;
-    padding-bottom: 4.5em;
-  }
-
   .mobile-lg\:py-\[4em\] {
     padding-top: 4em;
     padding-bottom: 4em;
-  }
-
-  .mobile-lg\:text-\[8px\] {
-    font-size: 8px;
   }
 
   .mobile-lg\:text-\[12px\] {
     font-size: 12px;
   }
 
-  .mobile-lg\:text-\[10px\] {
-    font-size: 10px;
-  }
-
-  .mobile-lg\:text-\[9px\] {
-    font-size: 9px;
+  .mobile-lg\:text-\[8px\] {
+    font-size: 8px;
   }
 }
 
@@ -1219,47 +1171,27 @@ video {
     grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
   }
 
-  .sm\:p-\[3em\] {
-    padding: 3em;
-  }
-
   .sm\:text-\[12px\] {
     font-size: 12px;
   }
 
-  .sm\:text-\[10px\] {
-    font-size: 10px;
+  .sm\:text-\[16px\] {
+    font-size: 16px;
   }
 }
 
 @media (min-width: 768px) {
-  .md\:text-\[10px\] {
-    font-size: 10px;
+  .md\:text-\[12px\] {
+    font-size: 12px;
   }
 }
 
 @media (min-width: 1080px) {
-  .lg\:text-\[16px\] {
-    font-size: 16px;
-  }
-
   .lg\:text-\[12px\] {
     font-size: 12px;
   }
 
-  .lg\:text-\[11px\] {
-    font-size: 11px;
-  }
-
-  .lg\:text-\[10px\] {
-    font-size: 10px;
-  }
-
-  .lg\:text-\[8px\] {
-    font-size: 8px;
-  }
-
-  .lg\:text-\[13px\] {
-    font-size: 13px;
+  .lg\:text-\[16px\] {
+    font-size: 16px;
   }
 }
