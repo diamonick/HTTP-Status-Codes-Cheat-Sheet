@@ -735,12 +735,12 @@ video {
   gap: 2.5em;
 }
 
-.gap-\[4em\] {
-  gap: 4em;
-}
-
 .gap-\[3em\] {
   gap: 3em;
+}
+
+.gap-\[4em\] {
+  gap: 4em;
 }
 
 .overflow-y-auto {
@@ -856,8 +856,8 @@ video {
   font-size: 1.5em;
 }
 
-.text-\[16px\] {
-  font-size: 16px;
+.text-\[12px\] {
+  font-size: 12px;
 }
 
 .text-\[1em\] {
@@ -878,10 +878,6 @@ video {
 
 .text-\[8px\] {
   font-size: 8px;
-}
-
-.text-\[12px\] {
-  font-size: 12px;
 }
 
 .text-\[\#535D73\] {
