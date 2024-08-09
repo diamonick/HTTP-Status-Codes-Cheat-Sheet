@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- Default Font Size: 1em or 16px -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Status Codes Cheat Sheet</title>
+    <!--<link rel="icon" type="image/svg" href="">-->
+    <link rel="stylesheet" href="tailwindStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script type="module" src="./main.js" defer></script>
+</head>
+<body class="text-[6px] mobile-md:text-[6px] mobile-lg:text-[8px] sm:text-[12px] lg:text-[16px]
+bg-white m-0 p-0 min-h-screen overflow-x-hidden overflow-y-auto">
+    <div class="Main
+    h-screen after:content-none after:clear-both after:table">
+        <div class="Main-Content
+        flex flex-col justify-start">
+            <div class="Header-Group text-[8px] mobile-md:text-[10px] sm:text-[12px] lg:text-[16px]
+            p-[4em] pb-[2em] flex flex-col justify-center gap-[1em]">
+                <p class="Header
+                text-[3em] text-center text-dark font-Nunito-EXB">
+                HTTP Status Codes Cheat Sheet
+                </p>
+                <p class="Subtext
+                text-[1.5em] text-center text-[#535D73] font-Nunito-SB">
+                A quick reference guide for all Hypertext Transfer Protocol (HTTP) response status codes.
+                </p>
+            </div>
+
+            <div class="HTTP-Group
+            flex flex-col justify-start items-center p-[4em] gap-[4em]">
+                <!-- 1XX: Informational -->
+                <div class="Informational-Codes min-w-[100%] z-10">
+                    <div class="Container outline outline-[0.5em] outline-informational
+                    rounded-[2em]">
+
+                        <!-- Header -->
+                        <div class="Header-Box relative
+                        p-[2em] bg-informational rounded-t-[1.9em]">
+                            <p class="Header
+                            text-[3em] text-center text-white font-Nunito-B">
+                                1XX: Informational Codes
+                            </p>
+                            <img class="Dropdown-Arrow-1XX absolute
+                            right-[2.5%] v-center w-[2.5em] h-[2.5em] rotate-[180deg] cursor-pointer"
+                            src="./Art/Dropdown_Arrow.svg">
+                        </div>
+                        
+                        <!-- Box Content -->
+                        <div class="Box-Content
+                        p-[3em] py-[6em] mobile-md:py-[3.5em] mobile-lg:py-[4em]
+                        text-[8px] mobile-md:text-[11px] mobile-lg:text-[12px] md:text-[10px] lg:text-[12px]
+                        grid grid-cols-box-content-col-1 sm:grid-cols-box-content place-items-center gap-[4em]">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2XX: Success -->
+                <div class="Success-Codes min-w-[100%] z-10">
+                    <div class="Container outline outline-[0.5em] outline-success
+                    rounded-[2em]">
+
+                        <!-- Header -->
+                        <div class="Header-Box relative p-[2em]
+                        bg-success rounded-t-[1.9em]">
+                            <p class="Header
+                            text-[3em] text-center text-white font-Nunito-B">
+                                2XX: Success Codes
+                            </p>
+                            <img class="Dropdown-Arrow-2XX absolute
+                            right-[2.5%] v-center w-[2.5em] h-[2.5em] rotate-[180deg] cursor-pointer"
+                            src="./Art/Dropdown_Arrow.svg">
+                        </div>
+                        
+                        <!-- Box Content -->
+                        <div class="Box-Content
+                        p-[3em] py-[6em] mobile-md:py-[3.5em] mobile-lg:py-[4em]
+                        text-[8px] mobile-md:text-[11px] mobile-lg:text-[12px] md:text-[10px] lg:text-[12px]
+                        grid grid-cols-box-content place-items-center gap-[4em]">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3XX: Redirection -->
+                <div class="Redirection-Codes min-w-[100%] z-10">
+                    <div class="Container outline outline-[0.5em] outline-redirection
+                    rounded-[2em]">
+
+                        <!-- Header -->
+                        <div class="Header-Box relative p-[2em]
+                        bg-redirection rounded-t-[1.9em]">
+                            <p class="Header
+                            text-[3em] text-center text-white font-Nunito-B">
+                                3XX: Redirection Codes
+                            </p>
+                            <img class="Dropdown-Arrow-3XX absolute
+                            right-[2.5%] v-center w-[2.5em] h-[2.5em] rotate-[180deg] cursor-pointer"
+                            src="./Art/Dropdown_Arrow.svg">
+                        </div>
+                        
+                        <!-- Box Content -->
+                        <div class="Box-Content
+                        p-[3em] py-[6em] mobile-md:py-[3.5em] mobile-lg:py-[4em]
+                        text-[8px] mobile-md:text-[11px] mobile-lg:text-[12px] md:text-[10px] lg:text-[12px]
+                        grid grid-cols-box-content place-items-center gap-[4em]">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 4XX: Client -->
+                <div class="Client-Codes min-w-[100%] z-10">
+                    <div class="Container outline outline-[0.5em] outline-client
+                    rounded-[2em]">
+
+                        <!-- Header -->
+                        <div class="Header-Box relative p-[2em]
+                        bg-client rounded-t-[1.9em]">
+                            <p class="Header
+                            text-[3em] text-center text-white font-Nunito-B">
+                                4XX: Client Codes
+                            </p>
+                            <img class="Dropdown-Arrow-4XX absolute
+                            right-[2.5%] v-center w-[2.5em] h-[2.5em] rotate-[180deg] cursor-pointer"
+                            src="./Art/Dropdown_Arrow.svg">
+                        </div>
+                        
+                        <!-- Box Content -->
+                        <div class="Box-Content
+                        p-[3em] py-[6em] mobile-md:py-[3.5em] mobile-lg:py-[4em]
+                        text-[8px] mobile-md:text-[11px] mobile-lg:text-[12px] md:text-[10px] lg:text-[12px]
+                        grid grid-cols-box-content place-items-center gap-[4em]">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5XX: Client -->
+                <div class="Server-Codes min-w-[100%] z-10">
+                    <div class="Container outline outline-[0.5em] outline-server
+                    rounded-[2em]">
+
+                        <!-- Header -->
+                        <div class="Header-Box relative p-[2em]
+                        bg-server rounded-t-[1.9em]">
+                            <p class="Header
+                            text-[3em] text-center text-white font-Nunito-B">
+                                5XX: Server Codes
+                            </p>
+                            <img class="Dropdown-Arrow-5XX absolute
+                            right-[2.5%] v-center w-[2.5em] h-[2.5em] rotate-[180deg] cursor-pointer"
+                            src="./Art/Dropdown_Arrow.svg">
+                        </div>
+                        
+                        <!-- Box Content -->
+                        <div class="Box-Content
+                        p-[3em] py-[6em] mobile-md:py-[3.5em] mobile-lg:py-[4em]
+                        text-[8px] mobile-md:text-[11px] mobile-lg:text-[12px] md:text-[10px] lg:text-[12px]
+                        grid grid-cols-box-content place-items-center gap-[4em]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="Footer text-[16px]
+        bg-[#373E4D] p-[2em] flex flex-col justify-center items-center gap-[1em]">
+            <div class="Developer-Block
+            flex flex-col justify-center items-center gap-[0.5em]">
+                <a href="https://www.diamonickportfolio.com/">
+                    <img class="Developer-Logo
+                    size-[4em]"
+                    src="./Art/Portfolio_Logo.svg">
+                </a>
+                <p class="Developer-Name
+                text-[1em] text-center text-white font-Nunito-B">
+                Diamonick Dunn
+                </p>
+            </div>
+            <p class="Copyright-Info
+            text-[1em] text-center text-[#7583A3] font-Nunito-M">
+            © 2024 by Diamonick Dunn.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

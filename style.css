@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*#region Nunito Fonts*/
+/* Nunito Regular font */
+@font-face
+{
+    font-family: 'Nunito Regular';
+    src: url('./Nunito-Fonts/NUNITO-REGULAR.TTF');
+}
+/* Nunito Bold font */
+@font-face
+{
+    font-family: 'Nunito Bold';
+    src: url('./Nunito-Fonts/NUNITO-BOLD.TTF');
+}
+/* Nunito Italic font */
+@font-face
+{
+    font-family: 'Nunito Italic';
+    src: url('./Nunito-Fonts/NUNITO-ITALIC.TTF');
+}
+/* Nunito Bold Italic font */
+@font-face
+{
+    font-family: 'Nunito Bold Italic';
+    src: url('./Nunito-Fonts/NUNITO-BOLDITALIC.TTF');
+}
+/* Nunito Medium font */
+@font-face
+{
+    font-family: 'Nunito Medium';
+    src: url('./Nunito-Fonts/NUNITO-MEDIUM.TTF');
+}
+/* Nunito Medium Italic font */
+@font-face
+{
+    font-family: 'Nunito Medium Italic';
+    src: url('./Nunito-Fonts/NUNITO-MEDIUMITALIC.TTF');
+}
+/* Nunito Semibold font */
+@font-face
+{
+    font-family: 'Nunito Semibold';
+    src: url('./Nunito-Fonts/NUNITO-SEMIBOLD.TTF');
+}
+/* Nunito Semibold Italic font */
+@font-face
+{
+    font-family: 'Nunito Semibold Italic';
+    src: url('./Nunito-Fonts/NUNITO-SEMIBOLDITALIC.TTF');
+}
+/* Nunito Extrabold font */
+@font-face
+{
+    font-family: 'Nunito Extrabold';
+    src: url('./Nunito-Fonts/NUNITO-EXTRABOLD.TTF');
+}
+/* Nunito Extrabold Italic font */
+@font-face
+{
+    font-family: 'Nunito Extrabold Italic';
+    src: url('./Nunito-Fonts/NUNITO-EXTRABOLDITALIC.TTF');
+}
+/* Nunito Light font */
+@font-face
+{
+    font-family: 'Nunito Light';
+    src: url('./Nunito-Fonts/NUNITO-LIGHT.TTF');
+}
+/* Nunito Light Italic font */
+@font-face
+{
+    font-family: 'Nunito Light Italic';
+    src: url('./Nunito-Fonts/NUNITO-LIGHTITALIC.TTF');
+}
+/*#endregion*/
+
+.Card
+{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.Card-Front, .Card-Back
+{
+    /*transition: transform 2s;*/
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.Card-Front
+{
+    transform: rotateY(0deg);
+}
+
+.Card-Back
+{
+    transform: rotateY(180deg);
+}
+
+@layer components
+{
+    .unselectable-element
+    {
+      @apply select-none pointer-events-none;
+    }
+    
+    .element-center
+    {
+      @apply top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4;
+    }
+
+    .h-center
+    {
+      @apply left-2/4 -translate-x-2/4;
+    }
+    
+    .v-center
+    {
+      @apply top-2/4 -translate-y-2/4;
+    }
+}
