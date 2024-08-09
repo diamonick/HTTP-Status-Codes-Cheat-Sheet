@@ -191,9 +191,9 @@ const successCodes = [
     {
         codeNumber: 202,
         codeName: "Accepted",
-        codeDesc: "The server has received the client’s request but is still processing it."
+        codeDesc: "The server has received the client's request but is still processing it."
     },
-    // 203: Non-Authoritative Information Copied
+    // 203: Non-Authoritative Information
     {
         codeNumber: 203,
         codeName: "Non-Authoritative Information",
@@ -246,228 +246,228 @@ const redirectionCodes = [
         codeName: "Multiple Choices",
         codeDesc: "The client must choose among several possible responses for the server request."
     },
-    // 301: 
+    // 301: Moved Permanently
     {
         codeNumber: 301,
         codeName: "Moved Permanently",
         codeDesc: "The server tells the client the requested resource is now at another URI permanently."
     },
-    // 302: 
+    // 302: Found
     {
         codeNumber: 302,
         codeName: "Found",
         codeDesc: "The server tells the client that the requested resource is temporarily at another URI."
     },
-    // 303: 
+    // 303: See Other
     {
         codeNumber: 303,
         codeName: "See Other",
         codeDesc: "The server doesn't redirect the client to the requested resource but to another page."
     },
-    // 304: 
+    // 304: Not Modified
     {
         codeNumber: 304,
         codeName: "Not Modified",
         codeDesc: "The server response is the same as in the past, so the client can continue to use the client's cached version of the server response."
     },
-    // 305: 
+    // 305: Use Proxy
     {
         codeNumber: 305,
-        codeName: "Use Proxy (deprecated)",
-        codeDesc: "The client could only access the requested resource through a proxy given in the response. Deprecation was because in-band configuration of a proxy is insecure."
+        codeName: "Use Proxy",
+        codeDesc: "The client could only access the requested resource through a proxy given in the response. The response code is deprecated due to security concerns."
     },
-    // 306: 
+    // 306: Switch Proxy
     {
         codeNumber: 306,
-        codeName: "(unused/reserved)",
-        codeDesc: "A previous version of the HTTP/1.1 specification used this response code."
+        codeName: "Switch Proxy",
+        codeDesc: "The response code is no longer in use. It was used to inform the client that the subsequent requests should use the specified proxy."
     },
-    // 307: 
+    // 307: Temporary Redirect
     {
         codeNumber: 307,
         codeName: "Temporary Redirect",
-        codeDesc: "The server tells the client that the resource they are looking for is temporarily at another URI. Unlike 302, the client must access the new URI using the same HTTP method as the original URI."
+        codeDesc: "The response code gets sent by the server in order to direct the client to the requested resource at another URI. The request method, however, must not be changed."
     },
-    // 308: 
+    // 308: Permanent Redirect
     {
         codeNumber: 308,
         codeName: "Permanent Redirect",
-        codeDesc: "The server tells the client that the resource they are looking for is now at another URI permanently. Unlike 301, the client must access the new URI using the same HTTP method as the original URI."
+        codeDesc: "The requested resource has been permanently assigned a new URI, and future references to the resource should be made by using one of the enclosed URIs."
     }
 ];
 //#endregion
 
 //#region 4XX: Client Codes
 const clientCodes = [
-    // 400: 
+    // 400: Bad Request
     {
         codeNumber: 400,
         codeName: "Bad Request",
         codeDesc: "The client has sent a request with incomplete, ill-constructed, or invalid data."
     },
-    // 401: 
+    // 401: Unauthorized
     {
         codeNumber: 401,
         codeName: "Unauthorized",
         codeDesc: "The client lacks the authorization needed to access the requested resource."
     },
-    // 402: 
+    // 402: Payment Required
     {
         codeNumber: 402,
         codeName: "Payment Required",
         codeDesc: "A rare status code reserved for digital payment systems."
     },
-    // 403: 
+    // 403: Forbidden
     {
         codeNumber: 403,
         codeName: "Forbidden",
         codeDesc: "The server prohibits the client from accessing the resource."
     },
-    // 404: 
+    // 404: Not Found
     {
         codeNumber: 404,
         codeName: "Not Found",
         codeDesc: "This code denotes a nonexistent resource on a working server."
     },
-    // 405: 
+    // 405: Method Not Allowed
     {
         codeNumber: 405,
         codeName: "Method Not Allowed",
         codeDesc: "The server has received and recognized the request but has rejected the specific request method."
     },
-    // 406: 
+    // 406: Not Acceptable
     {
         codeNumber: 406,
         codeName: "Not Acceptable",
         codeDesc: "The website or web application doesn't support the client's request with a particular protocol."
     },
-    // 407: 
+    // 407: Proxy Authentication Required
     {
         codeNumber: 407,
         codeName: "Proxy Authentication Required",
         codeDesc: "Similar to 401 Unauthorized, but the server requires authorization via a proxy."
     },
-    // 408: 
+    // 408: Request Timeout
     {
         codeNumber: 408,
         codeName: "Request Timeout",
         codeDesc: "The request the client sent to the server has expired."
     },
-    // 409: 
+    // 409: Conflict
     {
         codeNumber: 409,
         codeName: "Conflict",
-        codeDesc: "The request transmitted conflicts with the server’s internal operations."
+        codeDesc: "The request transmitted conflicts with the server's internal operations."
     },
-    // 410: 
+    // 410: Gone
     {
         codeNumber: 410,
         codeName: "Gone",
         codeDesc: "The resource sought by the client is permanently unavailable."
     },
-    // 411: 
+    // 411: Length Required
     {
         codeNumber: 411,
         codeName: "Length Required",
         codeDesc: "The server requires the Content-Length header field, but it was missing in the request, so the server rejected it."
     },
-    // 412: 
+    // 412: Precondition Failed
     {
         codeNumber: 412,
         codeName: "Precondition Failed",
         codeDesc: "The server does not meet the conditions indicated by the client."
     },
-    // 413: 
+    // 413: Payload Too Large
     {
         codeNumber: 413,
         codeName: "Payload Too Large",
         codeDesc: "Request entity exceeds server limits."
     },
-    // 414: 
+    // 414: URI Too Long
     {
         codeNumber: 414,
         codeName: "URI Too Long",
         codeDesc: "The URI requested by the client is longer than the server is willing to interpret."
     },
-    // 415: 
+    // 415: Unsupported Media Type
     {
         codeNumber: 415,
         codeName: "Unsupported Media Type",
         codeDesc: "The server doesn't support the media format of the requested data and thus rejects the request."
     },
-    // 416: 
+    // 416: Requested Range Not Satisfiable
     {
         codeNumber: 416,
         codeName: "Requested Range Not Satisfiable",
         codeDesc: "The server response cannot fulfill the range specified by the Range header field in the request."
     },
-    // 417: 
+    // 417: Expectation Failed
     {
         codeNumber: 417,
         codeName: "Expectation Failed",
         codeDesc: "The server cannot meet the expectation indicated by the Expect request header field."
     },
-    // 418: 
+    // 418: I'm a teapot
     {
         codeNumber: 418,
         codeName: "I'm a teapot",
         codeDesc: "The server sends this response to undesirable requests, such as automated queries."
     },
-    // 421: 
+    // 421: Misdirected Request
     {
         codeNumber: 421,
         codeName: "Misdirected Request",
-        codeDesc: "The request went to a server unable to produce a response.Copied"
+        codeDesc: "The request went to a server unable to produce a response."
     },
-    // 422: 
+    // 422: Unprocessable Entity
     {
         codeNumber: 422,
         codeName: "Unprocessable Entity",
         codeDesc: "Semantic errors in the request prevented the server from sending the expected response."
     },
-    // 423: 
+    // 423: Locked
     {
         codeNumber: 423,
         codeName: "Locked",
         codeDesc: "The requested resource is locked."
     },
-    // 424: 
+    // 424: Failed Dependency
     {
         codeNumber: 424,
         codeName: "Failed Dependency",
         codeDesc: "The failure of a previous request doomed this request to failure."
     },
-    // 425: 
+    // 425: Too Early
     {
         codeNumber: 425,
         codeName: "Too Early",
         codeDesc: "The server aborted a request that might be part of an (intentional or unintentional) replay attack."
     },
-    // 426: 
+    // 426: Upgrade Required
     {
         codeNumber: 426,
         codeName: "Upgrade Required",
         codeDesc: "The server would only perform the request after the client upgrades to one or more different protocols specified in its Upgrade header."
     },
-    // 428: 
+    // 428: Precondition Required
     {
         codeNumber: 428,
         codeName: "Precondition Required",
         codeDesc: "The origin server requires the request to satisfy certain conditions."
     },
-    // 429: 
+    // 429: Too Many Requests
     {
         codeNumber: 429,
         codeName: "Too Many Requests",
         codeDesc: "The client has sent too many requests in a given amount of time."
     },
-    // 431: 
+    // 431: Request Header Fields Too Large
     {
         codeNumber: 431,
         codeName: "Request Header Fields Too Large",
         codeDesc: "The server is unwilling to process the request because of oversized header fields."
     },
-    // 451: 
+    // 451: Unavailable for Legal Reasons
     {
         codeNumber: 451,
         codeName: "Unavailable for Legal Reasons",
@@ -475,6 +475,7 @@ const clientCodes = [
     }
 ];
 //#endregion
+
 //#region 5XX: Server Codes
 const serverCodes = [
     // 500: Internal Server Error
@@ -598,26 +599,13 @@ const statusCodeParams =
 
 Main();
 
+//#region Main Function(s)
 function Main()
 {
     for (var i = 0; i < statusCodeParams.length; i++)
     {
         addStatusCodes(statusCodeParams[i]);
     }
-}
-
-function go()
-{
-    gsap.to(".C",
-    {
-        scrollTrigger:
-        {
-            trigger: ".C",
-            toggleActions: "play none none none"
-        },
-        y: 0,
-        duration: 1
-    });
 }
 
 function addStatusCodes(statusCodeParameters)
@@ -674,3 +662,4 @@ function addStatusCodes(statusCodeParameters)
         statusCodeParameters.cards.push(card);
     });
 }
+//#endregion
