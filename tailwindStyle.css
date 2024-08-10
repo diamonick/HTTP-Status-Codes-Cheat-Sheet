@@ -608,6 +608,10 @@ video {
   margin: 0px;
 }
 
+.m-\[2em\] {
+  margin: 2em;
+}
+
 .box-content {
   box-sizing: content-box;
 }
@@ -638,6 +642,11 @@ video {
   height: 4em;
 }
 
+.size-\[2\.5em\] {
+  width: 2.5em;
+  height: 2.5em;
+}
+
 .h-\[2\.5em\] {
   height: 2.5em;
 }
@@ -652,6 +661,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[4em\] {
+  height: 4em;
 }
 
 .min-h-\[22em\] {
@@ -676,6 +689,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[4em\] {
+  width: 4em;
 }
 
 .min-w-\[100\%\] {
@@ -823,6 +840,14 @@ video {
   padding: 4em;
 }
 
+.p-\[1em\] {
+  padding: 1em;
+}
+
+.p-\[0\.5em\] {
+  padding: 0.5em;
+}
+
 .py-\[6em\] {
   padding-top: 6em;
   padding-bottom: 6em;
@@ -878,6 +903,18 @@ video {
 
 .text-\[8px\] {
   font-size: 8px;
+}
+
+.text-\[2em\] {
+  font-size: 2em;
+}
+
+.text-\[2\.5em\] {
+  font-size: 2.5em;
+}
+
+.text-\[2\.75em\] {
+  font-size: 2.75em;
 }
 
 .text-\[\#535D73\] {
@@ -1145,6 +1182,10 @@ video {
   .mobile-md\:text-\[6px\] {
     font-size: 6px;
   }
+
+  .mobile-md\:text-\[1\.5em\] {
+    font-size: 1.5em;
+  }
 }
 
 @media (min-width: 425px) {
@@ -1160,6 +1201,10 @@ video {
   .mobile-lg\:text-\[8px\] {
     font-size: 8px;
   }
+
+  .mobile-lg\:text-\[1\.5em\] {
+    font-size: 1.5em;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1173,6 +1218,14 @@ video {
 
   .sm\:text-\[16px\] {
     font-size: 16px;
+  }
+
+  .sm\:text-\[1\.5em\] {
+    font-size: 1.5em;
+  }
+
+  .sm\:text-\[3em\] {
+    font-size: 3em;
   }
 }
 
