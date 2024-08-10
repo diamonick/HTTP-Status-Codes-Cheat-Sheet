@@ -27,7 +27,10 @@ class StatusCodeCard
         let $self = this;
         this.element.addEventListener("mouseenter", function() {$self.flipToBack();});
         this.element.addEventListener("mouseleave", function() {$self.flipToFront();});
-        this.element.addEventListener("touchstart", function() {$self.flip();});
+        this.element.addEventListener("touchstart", function(event) {
+            event.preventDefault();
+            $self.flip();
+        });
     }
 
     flip()
